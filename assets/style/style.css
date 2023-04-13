@@ -443,7 +443,7 @@ header .active ul li + li {
   .userBox,
   .contentBox {
     width: calc(100vw - 30px);
-    margin-left: -16px;
+    margin-left: -12.5px;
   }
   .postBox {
     width: calc(100vw - 20px);
