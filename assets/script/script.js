@@ -226,23 +226,6 @@ postBtn.addEventListener("click", () => {
   }
 });
 
-profileIcon.addEventListener("click", () => {
-  localUserInfo.innerHTML = sub1.getInfo().replace(/,/g, "<br>");
-  localUserInfo.classList.add("infoLocalUser");
-  localUserInfo.classList.add("flex");
-  userInfo.classList.add("infotest");
-  userInfo.appendChild(localUserInfo);
-  userInfo.style.display = "flex";
-  postArea.style.display = "none";
-  content.style.display = "none";
-});
-
-exitBtn.addEventListener("click", () => {
-  userInfo.style.display = "none";
-  postArea.style.display = "inline";
-  content.style.display = "grid";
-});
-
 dropDown.addEventListener("click", () => {
   dropdownNav.classList.toggle("active");
   console.log("clicked");
