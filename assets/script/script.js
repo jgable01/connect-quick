@@ -22,7 +22,14 @@ const reader = new FileReader();
 const userInfo = document.querySelector(".userInfo");
 const exitBtn = document.querySelector(".fa-xmark");
 const localUserInfo = document.createElement("p");
+const rightBox = document.querySelector(".rightBox");
+const leftBox = document.querySelector(".leftBox");
+const grid = document.querySelector(".grid");
+const dropDown = document.querySelector(".dropdown");
+const nav = document.querySelector(".header-nav");
+const dropdownNav = document.querySelector(".dropdown-header-nav");
 let currentImg;
+
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -192,7 +199,8 @@ function addPost(input) {
     pImg.appendChild(currentImg);
     div.appendChild(pImg);
   }
-  content.prepend(div);
+  content.appendChild(div);
+  grid.appendChild(content);
   clearPost();
 }
 
@@ -233,6 +241,11 @@ exitBtn.addEventListener("click", () => {
   userInfo.style.display = "none";
   postArea.style.display = "inline";
   content.style.display = "grid";
+});
+
+dropDown.addEventListener("click", () => {
+  dropdownNav.classList.toggle("active");
+  console.log("clicked");
 });
 
 getUser(10);
