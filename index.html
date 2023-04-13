@@ -53,77 +53,76 @@
     </header>
     <!-- End of header -->
     <!-- PostBox -->
-    <div class="grid">
-      <div class="userInfo flex">
-        <button type="button"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <!-- Left Boxes -->
-      <div class="leftBox contentBox">
-        <div class="userBox">
-          <div class="userImg">
-            <img src="./assets/img/profile.JPG" />
-          </div>
-          <div class="userBoxInfo">
-            <h3>John Doe</h3>
-            <p>Software Engineer</p>
-          </div>
-          <div class="buttons">
-            <button type="button" class="button follow">Follow</button>
-            <button type="button" class="button connect">Connect</button>
-          </div>
-          <div class="userStats">
-            <div class="userStat">
-              <h3>1.2k</h3>
-              <p>Followers</p>
+    <div class="container">
+      <div class="grid">
+        <!-- Left Boxes -->
+        <div class="leftBox contentBox">
+          <div class="userBox">
+            <div class="userImg">
+              <img src="./assets/img/profile.JPG" />
             </div>
-            <div class="userStat">
-              <h3>1.2k</h3>
-              <p>Connections</p>
+            <div class="userBoxInfo">
+              <h3>John Doe</h3>
+              <p>Software Engineer</p>
             </div>
-          </div>
-          <div class="userLinks">
-            <div class="profileLink">
-              <a href="#"><i class="fa-solid fa-link"></i> View Profile</a>
+            <div class="buttons">
+              <button type="button" class="button follow">Follow</button>
+              <button type="button" class="button connect">Connect</button>
             </div>
-            <div class="websiteLink">
-              <a href="#"
-                ><i class="fa-solid fa-earth-americas"></i> View Website</a
-              >
+            <div class="userStats">
+              <div class="userStat">
+                <h3>1.2k</h3>
+                <p>Followers</p>
+              </div>
+              <div class="userStat">
+                <h3>1.2k</h3>
+                <p>Connections</p>
+              </div>
+            </div>
+            <div class="userLinks">
+              <div class="profileLink">
+                <a href="#"><i class="fa-solid fa-link"></i> View Profile</a>
+              </div>
+              <div class="websiteLink">
+                <a href="#"
+                  ><i class="fa-solid fa-earth-americas"></i> View Website</a
+                >
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- End of Left Boxes -->
-      <div class="postArea">
-        <textarea
-          name="postBox"
-          id="post"
-          class="post"
-          placeholder="What's new, "
-        ></textarea>
-        <div class="postBtn flex">
-          <div class="inputImg">
-            <input type="file" id="imgUpload" accept="image/*" height="200" />
-            <label for="imgUpload"><i class="fa-regular fa-image"></i></label>
-            <p class="fileName flex"></p>
-          </div>
-          <div class="postBtn">
-            <button type="button" class="addPost">Post</button>
-          </div>
-        </div>
-      </div>
-      <div class="rightBox contentBox">
-        <div class="userSuggest">
-          <div class="userImg">
-            <img src="./assets/img/profile.JPG" />
-          </div>
-          <div class="suggestInfo">
-            <h3>John Doe</h3>
-            <p>Software Engineer</p>
+        <!-- End of Left Boxes -->
+        <div class="postArea">
+          <textarea
+            name="postBox"
+            id="post"
+            class="post"
+            placeholder="What's new, "
+          ></textarea>
+          <div class="postBtn flex">
+            <div class="inputImg">
+              <input type="file" id="imgUpload" accept="image/*" height="200" />
+              <label for="imgUpload"><i class="fa-regular fa-image"></i></label>
+              <p class="fileName flex"></p>
+            </div>
+            <div class="postBtn">
+              <button type="button" class="addPost">Post</button>
+            </div>
           </div>
         </div>
+        <div class="rightBox contentBox">
+          <div class="userSuggest">
+            <div class="userImg">
+              <img src="./assets/img/profile.JPG" />
+            </div>
+            <div class="suggestInfo">
+              <h3>John Doe</h3>
+              <p>Software Engineer</p>
+            </div>
+          </div>
+        </div>
+        <p class="infoMsg"></p>
       </div>
-      <p class="infoMsg"></p>
     </div>
     <div class="container content grid"></div>
     <!-- End of body -->
