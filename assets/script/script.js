@@ -28,8 +28,10 @@ const grid = document.querySelector(".grid");
 const dropDown = document.querySelector(".dropdown");
 const nav = document.querySelector(".header-nav");
 const dropdownNav = document.querySelector(".dropdown-header-nav");
+const suggestedName = document.querySelector(".suggestedName");
+const city = document.querySelector(".location");
+const suggestedImg = document.querySelector(".suggestedProfile");
 let currentImg;
-
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -62,6 +64,30 @@ async function getUser(num) {
   } catch (error) {
     console.log(error);
   }
+}
+
+async function setUsers() {
+  const user1 = await getUser(1);
+  const user2 = await getUser(2);
+  const user3 = await getUser(3);
+  const user4 = await getUser(4);
+  const user5 = await getUser(5);
+  const user6 = await getUser(6);
+  const user7 = await getUser(7);
+  const user8 = await getUser(8);
+
+
+  const users = [
+    user1,
+    user2,
+    user3,
+    user4,
+    user5,
+    user6,
+    user7,
+    user8,
+  ];
+  return users;
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -231,7 +257,29 @@ dropDown.addEventListener("click", () => {
   console.log("clicked");
 });
 
-getUser(10);
+async function displaySuggested() {
+  let users = await setUsers();
+  for (let i = 0; i < users.length; i++) {
+    let suggestedUser = document.createElement("div");
+    suggestedUser.innerHTML += `
+    <div class="userSuggest">
+    <div class="userImg">
+      <img class= 'suggestedProfile' src="${users[i].picture.thumbnail}" />
+    </div>
+    <div class="suggestInfo">
+      <h3 class="suggestedName">${
+        users[i].name.first + " " + users[i].name.last
+      }</h3>
+      <p class="location">${
+        users[i].location.city + ", " + users[i].location.state
+      }</p>
+    </div>
+  </div>`;
+    rightBox.appendChild(suggestedUser);
+  }
+}
+displaySuggested();
+
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   Left & right Columns
