@@ -6,7 +6,7 @@
   --app-bg-orange: #d47215;
   --app-bg-purple: #6a1fc0;
   --app-bg-dark: #1c1c1c;
-  --app-header-bg: #46474d;
+  --app-header-bg: #282a31;
   --app-bg-green: #4dcc3c;
   --app-blue-hover: #4896fc;
   --app-red: #ff3c57;
@@ -23,20 +23,270 @@ body {
   margin-inline: auto;
   height: 100vh;
   display: flex;
-  justify-content: center;
 }
 
 .flex {
   display: flex;
 }
 
-.grid {
-  display: grid;
-}
-
 .hide {
   display: none;
 }
 
+/* - - - - - - - - - - - - - - - - - - - - - - - */
+/* Header                                        */
+/* - - - - - - - - - - - - - - - - - - - - - - - */
 
+header {
+  background-color: var(--app-header-bg);
+  height: 50px;
+  line-height: 50px;
+  color: var(--app-text);
+}
 
+header .flex {
+  justify-content: space-between;
+}
+
+header .header-title h1 {
+  color: #3487f3;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+header .profile img {
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  margin: 8px 0px;
+}
+
+.header-nav {
+  font-size: 0px;
+  height: 50px;
+}
+
+header .header-nav nav li {
+  display: inline;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.33s ease-in-out;
+}
+
+header .header-nav nav li:hover {
+  color: #5c9df3;
+}
+
+header .header-nav nav li + li {
+  margin-left: 18px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - */
+/* End of header                                 */
+/* - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - */
+/* Post area                                     */
+/* - - - - - - - - - - - - - - - - - - - - - - - */
+
+.grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.content {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 1fr;
+  place-items: center;
+  height: auto;
+  width: 100%;
+  gap: 15px;
+}
+
+.postBtn {
+  justify-content: space-between;
+}
+
+.postArea {
+  padding: 20px;
+  margin: 50px 0;
+  height: auto;
+  width: 25vw;
+  min-width: 350px;
+  line-height: 50px;
+  background-color: var(--app-header-bg);
+  justify-content: space-between;
+  border-radius: 6px;
+}
+
+.postArea #post {
+  background-color: transparent;
+  height: 155px;
+  width: 23vw;
+  min-width: 300px;
+  resize: none;
+  color: var(--app-text);
+}
+
+#imgUpload {
+  display: none;
+}
+
+.inputImg label {
+  color: var(--app-text);
+  cursor: pointer;
+  padding: 8px;
+  font-size: 24px;
+  transition: 0.33s all ease-in-out;
+}
+
+.inputImg label:hover {
+  color: var(--app-blue-hover);
+}
+
+.fileName {
+  display: inline;
+  color: var(--app-text);
+}
+
+.postArea button {
+  width: 75px;
+  height: 33px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #3487f3;
+  font-weight: 600;
+  transition: 0.33s all ease-in-out;
+}
+
+.postArea button:hover {
+  background-color: var(--app-blue-hover);
+  cursor: pointer;
+}
+
+.postBox {
+  place-items: center;
+  height: auto;
+  min-height: 100px;
+  background-color: #f2f3f4;
+  color: #000;
+  width: 25vw;
+  min-width: 350px;
+  border-radius: 6px;
+}
+
+.postBox:last-child {
+  margin-bottom: 50px;
+}
+
+.postBox p {
+  padding: 5px 15px 15px 15px;
+  border-radius: 6px;
+}
+
+.postBox img {
+  border-radius: 6px;
+}
+
+.postInfo {
+  justify-content: space-between;
+}
+
+.postInfo p {
+  padding: 15px;
+}
+
+.postInfo img {
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.infoMsg {
+  color: var(--app-text);
+  padding: 5px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - */
+/* End of post area                              */
+/* - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - */
+/* User information                              */
+/* - - - - - - - - - - - - - - - - - - - - - - - */
+
+.contentBox {
+  padding: 20px;
+  width: 100%;
+  place-items: right;
+  color: var(--app-text);
+}
+
+.leftBox {
+  place-items: left;
+}
+
+.userBox, .userSuggest {
+  padding: 20px;
+  width: 100%;
+  background-color: var(--app-header-bg);
+}
+
+.userImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  margin-right: 10px;
+  padding: 30px;
+  background-color: orange;
+}
+
+.userImg img {
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - */
+/* End of user information                       */
+/* - - - - - - - - - - - - - - - - - - - - - - - */
+
+.userInfo {
+  color: var(--app-text);
+  height: 30vh;
+  margin-top: 28.3vh;
+  width: 450px;
+  padding: 20px;
+  background-color: var(--app-header-bg);
+  display: none;
+}
+
+.userInfo button {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: transparent;
+}
+
+.fa-xmark {
+  color: var(--app-red);
+  font-size: 1.5rem;
+}
+
+.fa-xmark:hover {
+  cursor: pointer;
+}
+
+.infoLocalUser {
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  height: 100%;
+}
