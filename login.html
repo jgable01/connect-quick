@@ -5,13 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect Quick</title>
-    <script src="./assets/script/script.js" defer></script>
-    <link rel="stylesheet" href="assets/style/style.css" />
+    <script src="./assets/script/login.js" defer></script>
+    <link rel="stylesheet" href="assets/style/login.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
   </head>
 
-  <body></body>
+  <body>
+    <div class="container content">
+      <div class="loginImg">
+        <img src="./assets/img/loginImg.jpg" alt="login" />
+      </div>
+      <div class="loginBox">
+        <div class="loginTitle">
+          <h1>Connect Quick</h1>
+        </div>
+        <div class="loginForm">
+          <form action="">
+            <div class="formGroup">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                class="textInput"
+              />
+            </div>
+            <div class="formGroup">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                class="textInput"
+              />
+            </div>
+            <div class="buttons">
+              <input type="submit" value="Login" class="loginBtn button" />
+              <input type="submit" value="Create Profile" class="createProfileBtn button" />
+            </div>
+          </form>
+        </div>
+        <div class="loginFooter">
+          <p><a href="#">Forgot Password</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,133 @@
+@import url(reset.css);
+
+:root {
+  --app-bg: #f2f3f4;
+  --app-bg-blue: #3487f3;
+  --app-bg-orange: #d47215;
+  --app-bg-purple: #6a1fc0;
+  --app-bg-dark: #1c1c1c;
+  --app-header-bg: #282a31;
+  --app-bg-green: #4dcc3c;
+  --app-blue-hover: #4896fc;
+  --app-red: #ff3c57;
+  --app-red-hover: #ff2846;
+  --app-text: #e0d9d9;
+  --app-border: #2c2c2c;
+}
+
+body {
+  background-color: var(--app-bg-dark);
+}
+
+.container {
+  width: min(100% - 30px, 1280px);
+  margin-inline: auto;
+  height: 100vh;
+  display: flex;
+}
+
+.flex {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.content {
+  width: 80%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 7fr 4fr;
+  place-items: center;
+}
+
+.loginBox {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 70%;
+  min-height: 280px;
+  max-height: 760px;
+  background-color: var(--app-bg);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 var(--app-border);
+  padding: 20px;
+}
+
+
+.loginImg {
+  width: 100%;
+  height: 70%;
+  min-height: 280px;
+  max-height: 760px;
+  min-width: 500px;
+  background-image: url(../img/login.png);
+  border-radius: 10px;
+}
+
+.loginImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.loginForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.textInput {
+  width: 300px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 6px;
+  padding: 5px;
+  border: 1px solid var(--app-bg-blue);
+}
+
+.button {
+  width: 150px;
+  height: 40px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #3487f3;
+  font-weight: 600;
+  transition: 0.33s all ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--app-blue-hover);
+  cursor: pointer;
+}
+
+.createProfileBtn {
+  color: var(--app-bg-blue);
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+.createProfileBtn:hover {
+  background-color: #eae7e7;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1050px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .loginImg {
+    display: none;
+  }
+}
+  
+}
+
+

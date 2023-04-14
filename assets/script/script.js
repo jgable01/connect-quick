@@ -184,10 +184,6 @@ imgUpload.addEventListener("change", () => {
     reader.readAsDataURL(file);
   } else {
     postArea.style.border = "1px solid #ff2846";
-    infoMsg.innerHTML = `Invalid file. Please upload ${allowedExtensions.join(
-      ", "
-    )} files`;
-    postArea.appendChild(infoMsg);
   }
 });
 
@@ -244,8 +240,6 @@ postBtn.addEventListener("click", () => {
       addPost(input);
     } else {
       postArea.style.border = "1px solid #ff2846";
-      infoMsg.innerHTML = "Invalid Input, you cannot post Nothing!";
-      postArea.appendChild(infoMsg);
     }
   } catch (err) {
     throw "Invalid input";
