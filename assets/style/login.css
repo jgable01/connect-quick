@@ -119,6 +119,18 @@ body {
   justify-content: space-evenly;
 }
 
+.loginFailed {
+  display: flex;
+  justify-content: center;
+  color: #ff3c57;
+}
+
+.loginDetails {
+  display: inline-flex;
+  margin: 5px;
+  justify-content: center;
+}
+
 @media screen and (max-width: 1050px) {
   .content {
     grid-template-columns: 1fr;

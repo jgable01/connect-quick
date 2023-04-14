@@ -12,6 +12,8 @@
 const emailBox = document.querySelector("#email");
 const passwordBox = document.querySelector("#password");
 const loginBtn = document.querySelector(".loginBtn");
+const info = document.querySelector(".info");
+const forgotPassword = document.querySelector(".forgotPassword");
 
 localStorage.setItem("email", "login@email.com");
 localStorage.setItem("password", "password");
@@ -30,6 +32,13 @@ function login() {
   ) {
     window.location.href = "index.html";
   } else {
-    console.log("Incorrect email or password");
+    info.innerHTML = '<p class="loginFailed" >Incorrect email or password</p>';
   }
 }
+
+forgotPassword.addEventListener("click", () => {
+  info.innerHTML = '<p class="loginDetails" >Email: login@email.com</p>'
+  info.innerHTML += '<p class="loginDetails" >Password: password</p>';
+});
+
+
