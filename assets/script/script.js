@@ -31,6 +31,7 @@ const dropdownNav = document.querySelector(".dropdown-header-nav");
 const suggestedName = document.querySelector(".suggestedName");
 const city = document.querySelector(".location");
 const suggestedImg = document.querySelector(".suggestedProfile");
+const overlay = document.querySelector(".overlay");
 let currentImg;
 
 window.location.href = "#login";
@@ -88,6 +89,9 @@ async function setUsers() {
     user7,
     user8,
   ];
+  setTimeout(() => {
+    overlay.style.display = "none";
+  }, 500);
   return users;
 }
 
