@@ -33,6 +33,7 @@ const city = document.querySelector(".location");
 const suggestedImg = document.querySelector(".suggestedProfile");
 let currentImg;
 
+window.location.href = "#login";
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   Utils
