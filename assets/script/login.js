@@ -30,7 +30,7 @@ function login() {
     email === localStorage.getItem("email") &&
     password === localStorage.getItem("password")
   ) {
-    window.location.href = "#index";
+    window.location.href = "./index.html";
   } else {
     info.innerHTML = '<p class="loginFailed" >Incorrect email or password</p>';
   }
