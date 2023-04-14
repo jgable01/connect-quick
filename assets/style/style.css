@@ -410,6 +410,7 @@ header .active ul li + li {
   width: 50px;
   margin: 5px;
   padding: 0;
+  cursor: pointer;
 }
 
 .userSuggest p,
@@ -420,6 +421,12 @@ header .active ul li + li {
 
 .userSuggest h3 {
   font-size: 1rem;
+  cursor: pointer;
+  transition: 0.33s all ease-in-out;
+}
+
+.userSuggest h3:hover {
+  color: var(--app-blue-hover);
 }
 
 .userSuggest img {
@@ -532,7 +539,7 @@ footer {
 }
 
 .footer-socials a:hover i {
-  color: #e9e3e3;
+  color: var(--app-blue-hover);
 }
 
 .footer-bottom {
