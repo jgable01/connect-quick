@@ -77,7 +77,8 @@ async function setUsers() {
   const user6 = await getUser(6);
   const user7 = await getUser(7);
   const user8 = await getUser(8);
-
+  const user9 = await getUser(9);
+  const user10 = await getUser(10);
 
   const users = [
     user1,
@@ -88,6 +89,8 @@ async function setUsers() {
     user6,
     user7,
     user8,
+    user9,
+    user10
   ];
   setTimeout(() => {
     overlay.style.display = "none";
@@ -258,6 +261,9 @@ dropDown.addEventListener("click", () => {
 
 async function displaySuggested() {
   let users = await setUsers();
+  let suggestedTitle = document.createElement("h3");
+  suggestedTitle.innerHTML = "People you may know";
+  suggestedTitle.classList.add("suggestedTitle");
   for (let i = 0; i < users.length; i++) {
     let suggestedUser = document.createElement("div");
     suggestedUser.innerHTML += `
@@ -276,6 +282,7 @@ async function displaySuggested() {
   </div>`;
     rightBox.appendChild(suggestedUser);
   }
+  rightBox.prepend(suggestedTitle);
 }
 displaySuggested();
 

@@ -246,7 +246,7 @@ header .active ul li + li {
 }
 
 .postBox:last-child {
-  margin-bottom: 200px;
+  margin-bottom: 400px;
 }
 
 .postBox p {
@@ -278,7 +278,6 @@ header .active ul li + li {
 }
 
 .infoMsg {
-  color: var(--app-text);
   padding: 5px;
 }
 
@@ -564,6 +563,7 @@ footer {
     width: calc(100vw - 30px);
     margin-left: -22.5px;
   }
+
   .postArea {
     width: calc(100vw - 30px);
     margin-left: -27.5px;
@@ -574,12 +574,13 @@ footer {
   .postBox img {
     border-radius: 6px;
   }
-  .rightBox {
-    margin-bottom: 175px;
-  }
 
   .postBox:last-child {
     margin-bottom: 10px;
+  }
+
+  .rightBox {
+    margin-bottom: 125px;
   }
 
   header {
@@ -604,9 +605,6 @@ footer {
     display: block;
   }
 
-  footer {
-    margin-top: 350px;
-  }
 }
 
 @media screen and (min-width: 969px) {
