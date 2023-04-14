@@ -454,39 +454,7 @@ header .active ul li + li {
 /* End of user information                       */
 /* - - - - - - - - - - - - - - - - - - - - - - - */
 
-.userInfo {
-  color: var(--app-text);
-  height: 30vh;
-  margin-top: 28.3vh;
-  width: 450px;
-  padding: 20px;
-  background-color: var(--app-header-bg);
-  display: none;
-}
 
-.userInfo button {
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background: transparent;
-}
-
-.fa-xmark {
-  color: var(--app-red);
-  font-size: 1.5rem;
-}
-
-.fa-xmark:hover {
-  cursor: pointer;
-}
-
-.infoLocalUser {
-  align-items: center;
-  justify-content: center;
-  width: 450px;
-  height: 100%;
-}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - */
 /* Footer                                        */
