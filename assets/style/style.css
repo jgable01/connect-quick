@@ -550,7 +550,7 @@ footer {
 
 .footer-bottom span {
   text-transform: uppercase;
-  color: #ff9933;
+  color: var(--app-bg-blue);
   font-weight: 200;
 }
 
