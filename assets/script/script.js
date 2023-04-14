@@ -222,7 +222,7 @@ function addPost(input) {
     pImg.appendChild(currentImg);
     div.appendChild(pImg);
   }
-  content.appendChild(div);
+  content.prepend(div);
   grid.appendChild(content);
   clearPost();
 }
