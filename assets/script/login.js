@@ -21,6 +21,11 @@ console.log(localStorage.getItem("email"));
 console.log(localStorage.getItem("password"));
 
 loginBtn.addEventListener("click", login);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    login();
+  }
+});
 
 function login() {
   const email = emailBox.value;
